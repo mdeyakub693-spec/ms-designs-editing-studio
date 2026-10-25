@@ -19,3 +19,11 @@
 <section id="contact"><div class="wrap"><div class="contactbox"><div><div class="kicker">Have an idea?</div><h2>Let's make it<br>look incredible.</h2><p>For design work, collaborations or questions, reach out and let's create something memorable.</p></div><a class="btn" href="mailto:your-email@example.com?subject=Project%20inquiry%20-%20MS%20Designs">Email the studio ↗</a></div></div></section></main>
 <footer class="wrap"><span>© <span id="year"></span> MS Designs n Editing Studio.</span><a href="#home">Back to top ↑</a></footer>
 <script>document.getElementById('year').textContent=new Date().getFullYear();const buttons=document.querySelectorAll('.filter');buttons.forEach(b=>b.addEventListener('click',()=>{buttons.forEach(x=>x.classList.remove('active'));b.classList.add('active');document.querySelectorAll('.project').forEach(c=>c.classList.toggle('hidden',b.dataset.filter!=='all'&&c.dataset.category!==b.dataset.filter))}));document.getElementById('images').addEventListener('change',function(){const grid=document.getElementById('grid');[...this.files].forEach(file=>{if(!file.type.startsWith('image/'))return;const url=URL.createObjectURL(file),card=document.createElement('article');card.className='project';card.dataset.category='photo';const thumb=document.createElement('div');thumb.className='thumb';const img=document.createElement('img');img.src=url;img.alt='Uploaded design';img.style.cssText='width:100%;height:100%;object-fit:cover';thumb.appendChild(img);const info=document.createElement('div');info.className='info';info.innerHTML='<div class="type">Your work</div><h3></h3><p>Uploaded portfolio image</p>';info.querySelector('h3').textContent=file.name.replace(/\.[^.]+$/,'').replace(/[-_]+/g,' ')||'My design';card.append(thumb,info);grid.prepend(card)});buttons.forEach(x=>x.classList.remove('active'));buttons[0].classList.add('active');document.querySelectorAll('.project').forEach(c=>c.classList.remove('hidden'));this.value=''});</script></body></html>
+
+<section class="contact">
+  <h2>Contact Me</h2>
+  <p>Have a project in mind? Let's work together!</p>
+  <a href="mailto:mdeyakub693@gmail.com">
+    mdeyakub693@gmail.com
+  </a>
+</section>
